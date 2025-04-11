@@ -72,6 +72,21 @@ public class DataPersistenceManager : MonoBehaviour
         return SaveData;
     }
 
+    public void HardSaveData(SaveData data)
+    {
+        SaveData = data;
+        dataHandler.SaveGame(SaveData);
+    }
+
+    public void DeleteGame(GameData gameData)
+    {
+        SaveData = HardLoadData();
+        int index = SaveData.games.FindIndex(data => data.dateTime == gameData.dateTime);
+        SaveData.games.RemoveAt(index);
+        HardSaveData(SaveData);
+
+    }
+
     public void SaveGame()
     {
         if (HardLoadData() == null)

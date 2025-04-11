@@ -358,7 +358,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Marco Rasmus Kevin Brian
+  m_text: Placeholder
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de3ab050c6ab36a4195f263a1e47e2d8, type: 2}
   m_sharedMaterial: {fileID: -5252881918904139653, guid: de3ab050c6ab36a4195f263a1e47e2d8, type: 2}
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 49.15
+  m_fontSize: 57.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Roskilde Ringen
+  m_text: Placeholder
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de3ab050c6ab36a4195f263a1e47e2d8, type: 2}
   m_sharedMaterial: {fileID: -5252881918904139653, guid: de3ab050c6ab36a4195f263a1e47e2d8, type: 2}
@@ -596,7 +596,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.15
+  m_fontSize: 44.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

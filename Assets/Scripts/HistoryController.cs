@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class HistoryController : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class HistoryController : MonoBehaviour
     public Transform gameIndexParent;
     public Transform contentParent;
     public Transform playerNamesParent;
+    public Button deleteGameButton;
 
     private void Awake()
     {
@@ -56,6 +58,7 @@ public class HistoryController : MonoBehaviour
             {
                 players += player.playerName + " ";
             }
+            obj.transform.GetChild(7).GetComponent<TextMeshProUGUI>().text = players;
             obj.GetComponent<GameIndexController>().data = game;
         }
     }
@@ -81,15 +84,15 @@ public class HistoryController : MonoBehaviour
         }
     }
 
-    public void DisplayGameDetails(GameData data)
+    public void DisplayGameDetails(GameData data, GameIndexController gic)
     {
         gameDetailsMenuParent.SetActive(true);
-        GenerateDetailedGameView(data);
+        GenerateDetailedGameView(data, gic);
     }
 
-    public void GenerateDetailedGameView(GameData data)
+    public void GenerateDetailedGameView(GameData data, GameIndexController gic)
     {
-
+        deleteGameButton.onClick.AddListener(gic.DeleteGame);
         for (int i = 0; i < data.players.Length; i++)
         {
             GameObject player = Instantiate(playerNamePrefab, playerNamesParent);
